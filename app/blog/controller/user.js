@@ -8,6 +8,7 @@ let client_id = '02f5d364d2d4aff85a00';
 let client_secret = '015e99f9215438a681e4529efb47b72c6b574552';
 
 exports.login = function*() {
+  console.log('yyyyy');
   yield this.bindDefault();
 
   // 如果已经登录就不用再登录，直接重定向到首页

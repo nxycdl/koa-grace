@@ -9,7 +9,16 @@ exports.index = function* () {
    * 然后在 this.backData.repoInfo 中就可以拿到返回参数
    */
 
+  console.log('xxxxx');
   yield this.render('home', {
     title: 'Hello , Grace!'
   });
+}
+
+exports.test=function*(){
+  var options ={
+    name:'xxx',
+    sex:'F1'
+  }
+  yield this.body=options;
 }

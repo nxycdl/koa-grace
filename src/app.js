@@ -16,6 +16,12 @@ const _static = require('koa-grace-static');
 const compress = require('koa-compress');
 
 let config = global.config;
+global.M={};
+global._ = require('underscore');
+var basePath = path.resolve(__dirname, '..');
+console.log(basePath);
+var styleFn= require('./init')(basePath);
+_.extend(_,styleFn);
 
 let app = koa();
 
@@ -42,6 +48,7 @@ app.use(xload(app, config.xload));
 
 // 获取vhost
 let vhosts = Object.keys(config.vhost);
+M.pool = require( '../mysqlpool/pool')(config.mysql);
 // 注入vhost路由
 app.use(vhost(vhosts.map((item) => {
   let vapp = koa();
