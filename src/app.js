@@ -61,10 +61,10 @@ app.use(vhost(vhosts.map((item) => {
   }))
 
   // 如果配置了连接数据库
-  config.mongo.api[appName] && vapp.use(mongo(vapp, {
+/*  config.mongo.api[appName] && vapp.use(mongo(vapp, {
     root: appPath + '/model/mongo',
     connect: config.mongo.api[appName]
-  }))
+  }))*/
 
   // 配置api
   vapp.use(proxy(vapp, config.api, {
