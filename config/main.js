@@ -22,7 +22,6 @@ module.exports = {
   api: {
     github_api: 'https://api.github.com/',
     github: 'https://github.com/',
-    htgl:'http://www.ihealthyun.com:3343/',
   },
 
   // 站点相关的配置

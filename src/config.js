@@ -17,6 +17,7 @@ module.exports = function config(args) {
 
   // 获取默认配置
   let config = require('../config/main');
+
   let extendConfig = {};
   let env = args.env || 'development';
 
@@ -27,7 +28,6 @@ module.exports = function config(args) {
   if (config.extend) {
 
     let extPath = path.resolve(config.extend, fileName);
-
     extendConfig = fs.existsSync(extPath) ? require(extPath) : extendConfig;
 
   }

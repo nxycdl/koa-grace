@@ -19,7 +19,9 @@ module.exports = {
   // controller中请求各类数据前缀和域名的键值对
   api: {
     github_api: 'https://api.github.com/',
-    github: 'https://github.com/'
+    github: 'https://github.com/',
+    htgl:'http://www.ihealthyun.com:3343/',
+    ht:'http://127.0.0.1:8080',
   },
 
   // mock server配置

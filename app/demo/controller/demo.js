@@ -33,14 +33,42 @@ module.exports = {
         this.body = data ;
     },
     demo6:function*(){
-
+        //代理
         yield this.proxy({
-            otherInfo:'http://www.ihealthyun.com:3343/htgl/app/getweixintoparticle.do?limit=10',
+            otherInfo:'htgl:/htgl/app/getweixintoparticle.do?limit=10',
+            otherInfo2:'htgl:/htgl/app/getweixintoparticle.do?limit=2',
         });
-
-        console.log(this.backData);
-
-
+        this.body = this.backData.otherInfo2 ;
+    },
+    demo7:function*(){
+        //Post请求;用Form方式提交;
+        console.log(this.query);
+        var params ={
+            username: '2012',
+            userpassword: '000000'.toString().toUpperCase()
+        }
+        this.request.body = this.request.body || {};
+        this.request.body.username = params.username;
+        this.request.body.userpassword = params.userpassword;
+        console.log(this.request.body);
+        yield this.proxy({
+            otherInfo:'htgl:post:htgl/app/logininclassapp.do',
+        });
+        this.body = this.backData.otherInfo ;
+    },
+    demo8:function*(){
+        //Post请求;用Form方式提交;
+        console.log(this.query);
+        var params ={
+            username: '2012',
+            userpassword: '000000'.toString().toUpperCase()
+        }
+        yield this.proxy({
+            otherInfo:'htgl:post:htgl/app/logininclassapp.do'
+        },{
+            form: params
+        })
+        this.body = this.backData.otherInfo ;
     }
 
 }
