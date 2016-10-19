@@ -31,5 +31,16 @@ module.exports = {
             M.pool.releaseConnection(db);
         }
         this.body = data ;
+    },
+    demo6:function*(){
+
+        yield this.proxy({
+            otherInfo:'http://www.ihealthyun.com:3343/htgl/app/getweixintoparticle.do?limit=10',
+        });
+
+        console.log(this.backData);
+
+
     }
+
 }

@@ -14,7 +14,7 @@ const csrf = require('koa-grace-csrf');
 const session = require('koa-grace-session');
 const _static = require('koa-grace-static');
 const compress = require('koa-compress');
-const moment = rquire('moment');
+const moment = require('moment');
 
 let config = global.config;
 global.M={};

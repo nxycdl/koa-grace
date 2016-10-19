@@ -21,7 +21,8 @@ module.exports = {
   // controller中请求各类数据前缀和域名的键值对
   api: {
     github_api: 'https://api.github.com/',
-    github: 'https://github.com/'
+    github: 'https://github.com/',
+    htgl:'http://www.ihealthyun.com:3343/',
   },
 
   // 站点相关的配置
