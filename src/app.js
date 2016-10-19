@@ -14,10 +14,12 @@ const csrf = require('koa-grace-csrf');
 const session = require('koa-grace-session');
 const _static = require('koa-grace-static');
 const compress = require('koa-compress');
+const moment = rquire('moment');
 
 let config = global.config;
 global.M={};
 global._ = require('underscore');
+global.moment = require('moment')
 var basePath = path.resolve(__dirname, '..');
 console.log(basePath);
 var styleFn= require('./init')(basePath);
@@ -48,6 +50,7 @@ app.use(xload(app, config.xload));
 
 // 获取vhost
 let vhosts = Object.keys(config.vhost);
+//注入MSQL;
 M.pool = require( '../mysqlpool/pool')(config.mysql);
 // 注入vhost路由
 app.use(vhost(vhosts.map((item) => {

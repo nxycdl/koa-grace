@@ -67,17 +67,7 @@ module.exports = {
       'blog': 'mongodb://localhost:27017/blog'
     }
   },
-  mysql: {
-    host: '127.0.0.1',
-    port: '3306',
-    database: 'koa',
-    user: 'root',
-    password: 'root',
-    waitForConnections: true,
-    connectionLimit: 20,
-    supportBigNumbers: true,
-    dateStrings: 'yyyy-MM-dd HH:mm:ss'
-  },
+
 
   // 模板引擎配置，默认：swig
   template: {

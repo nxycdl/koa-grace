@@ -67,5 +67,16 @@ module.exports = {
       keepExtensions: true
     },
     download: {}
+  },
+  mysql: {
+    host: '120.26.109.153',
+    port: '3306',
+    database: 'koa',
+    user: 'koa',
+    password: 'koa99999',
+    waitForConnections: true,
+    connectionLimit: 20,
+    supportBigNumbers: true,
+    dateStrings: 'yyyy-MM-dd HH:mm:ss'
   }
 }
