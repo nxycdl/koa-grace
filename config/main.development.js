@@ -7,6 +7,7 @@ module.exports = {
   vhost: {
     '127.0.0.1': 'demo',
     'localhost': 'blog',
+    '192.168.10.112':'demo',
     //'feclub.cn': 'blog'
   },
 
