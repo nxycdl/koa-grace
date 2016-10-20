@@ -69,7 +69,7 @@ module.exports = {
     download: {}
   },
   mysql: {
-    host: '120.26.109.153',
+    host: '127.0.0.1',
     port: '3306',
     database: 'koa',
     user: 'koa',
